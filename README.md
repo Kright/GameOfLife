@@ -1,6 +1,6 @@
 ### What is it
 
-Realization of Conway's Game of Life on shaders. Works really fast :)
+Implementation of Conway's Game of Life on shaders. Works really fast :)
 
 In addition, there is a mode with [Ising model](https://en.wikipedia.org/wiki/Ising_model)
 
@@ -21,7 +21,7 @@ gradlew desktop:run
 * scroll: change scale
 * -,+ : changing inverse temperature (in Ising model only)
 
-##### Realization
+##### Contributing
 scala code with libgdx library
 
 code placed in core/src
@@ -29,5 +29,6 @@ code placed in core/src
 GLSL files in android/assets
 
 If you want to add new mode, just add new java or scala class, which implements CellularAutomaton and modify the next line in Main class:
-
-    private val automats = Array[CellularAutomaton](new GameOfLife(vertexData, textureSize), new IsingModel(vertexData, textureSize))
+```scala
+private val automats = Array[CellularAutomaton](new GameOfLife(vertexData, textureSize), new IsingModel(vertexData, textureSize))
+```
